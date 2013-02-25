@@ -4,7 +4,7 @@
 source "${TMUX_POWERLINE_DIR_LIB}/tmux_adapter.sh"
 
 branch_symbol="⭠"
-git_colour="5"
+git_colour="11"
 svn_colour="220"
 hg_colour="45"
 
@@ -51,7 +51,8 @@ __parse_git_branch() {
 	# Clean off unnecessary information.
 	branch=${branch##*/}
 
-	echo  -n "#[fg=colour${git_colour}]${branch_symbol} #[fg=colour${TMUX_POWERLINE_CUR_SEGMENT_FG}]${branch}"
+	#echo  -n "#[fg=colour${git_colour}]${branch_symbol} #[fg=colour${TMUX_POWERLINE_CUR_SEGMENT_FG}]${branch}"
+	echo  -n "#[fg=colour${git_colour}]${branch_symbol} #[fg=colour${git_colour}]${branch}"
 }
 
 # Show SVN branch.
